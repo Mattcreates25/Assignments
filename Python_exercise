@@ -1,0 +1,30 @@
+# python assignment
+
+Using strings, lists, tuples and dictionaries concepts, find the reverse complement of AAAAATCCCGAGGCGGCTATATAGGGCTCCGGAGGCGTAATATAAAA
+
+```py
+#create a string of the sequence
+DNA_sequence = 'AAAAATCCCGAGGCGGCTATATAGGGCTCCGGAGGCGTAATATAAAA'
+#make an empty variable of the reverse complement
+reverse_comp = ""
+#create a dictionary of base complements to reverse
+rev_dict={"A": "T", "T": "A", "G": "C", "C": "G"}
+#reverse the sequence using list comprehension
+rev_seq= DNA_sequence[::-1]
+#get a list of the nucleotides reverse complements
+rev_comp=[rev_dict.get(character) for character in rev_seq]
+#create a one string from the list rev_comp
+rev_str= "".join(rev_comp)
+
+
+#print out the sequence
+print("DNA_seq=", DNA_sequence)
+print("reverse_complement", rev_str)
+```
+
+__output__
+
+```
+DNA_seq= AAAAATCCCGAGGCGGCTATATAGGGCTCCGGAGGCGTAATATAAAA
+reverse_complement TTTTATATTACGCCTCCGGAGCCCTATATAGCCGCCTCGGGATTTTT
+```
