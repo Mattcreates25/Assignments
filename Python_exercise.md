@@ -145,11 +145,11 @@ tuple() method can convert list to tuple
 
 Solution:
 ```python
-numb=input()
-l=numb.split(",")
-t=tuple(l)
-print(l)
-print(t)
+numbers = input()
+delimin=numbers.split(",")
+newnumb=tuple(delimin)
+print(delimin)
+print(newnumb)
 ```
 if the input supplied is 12,23,24 then:
 
@@ -183,11 +183,18 @@ class InputOutString(object):
     def printString(self):
         print(self.s.upper())
 
-strObj = InputOutString()
-strObj.getString()
-strObj.printString()
+Cobject = InputOutString()
+Cobject.getString()
+Cobject.printString()
 ```
-
+__input fed__
+```
+this is supposed to be caps
+```
+__output__
+```
+THIS IS SUPPOSED TO BE CAPS
+```
 ### Question 6
 Level 2
 
@@ -210,14 +217,14 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 ```python
 import math
-c=50
-h=30
-value = []
-items=[x for x in input().split(',')]
-for d in items:
-    value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
+C=50
+H=30
+values = []
+items=[i for i in input().split(',')]
+for D in items:
+    values.append(str(int(round(math.sqrt(2*C*float(D)/H)))))
 
-print(','.join(value))
+print(','.join(values))
 ```
 
 ### Question 7
@@ -237,8 +244,8 @@ Note: In case of input data being supplied to the question, it should be assumed
 
 Solution:
 ```python
-input_str = input()
-dim = [int(x) for x in input_str.split(',')]
+console_in = input()
+dim = [int(x) for x in console_in.split(',')]
 rows = dim[0]
 cols = dim[1]
 lists = [[0 for col in range(cols)] for row in range(rows)]
@@ -265,15 +272,15 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-items=[x for x in input().split(',')]
-items.sort()
-print(','.join(items))
+CSV=[i for i in input().split(',')]
+CSV.sort()
+print(','.join(CSV))
 ```
 
 ### Question 9
 Level 2
 
-Question£º
+Question:
 Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
 Suppose the following input is supplied to the program:
 Hello world
@@ -287,18 +294,20 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-lines = []
-while True:
-    s = input()
-    if s:
-        lines.append(s.upper())
-    else:
-        break;
+class InputOutString(object):
+    def __init__(self):
+        self.s = ""
 
-for sentence in lines:
-    print(sentence)
+    def getString(self):
+        self.s = input()
+    
+    def printString(self):
+        print(self.s.upper())
+
+Cobject = InputOutString()
+Cobject.getString()
+Cobject.printString()
 ```
-
 ### Question 10
 Level 2
 
@@ -315,8 +324,8 @@ We use set container to remove duplicated data automatically and then use sorted
 
 Solution:
 ```python
-s = input()
-words = [word for word in s.split(" ")]
+sentence = input()
+items = [i for i in sentence.split(" ")]
 print(" ".join(sorted(list(set(words)))))
 ```
 
