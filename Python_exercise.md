@@ -450,11 +450,11 @@ Solution:
 
 ```python
 a = input()
-n1 = int( "%s" % a )
-n2 = int( "%s%s" % (a,a) )
-n3 = int( "%s%s%s" % (a,a,a) )
-n4 = int( "%s%s%s%s" % (a,a,a,a) )
-print(n1+n2+n3+n4)
+perm1 = int( "%s" % a )
+perm2 = int( "%s%s" % (a,a) )
+perm3 = int( "%s%s%s" % (a,a,a) )
+perm4 = int( "%s%s%s%s" % (a,a,a,a) )
+print(perm1 + perm2 + perm3 + perm4)
 ```
 
 ### Question 16
@@ -473,9 +473,9 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 
 ```python
-values = input()
-numbers = [x for x in values.split(",") if int(x)%2!=0]
-print(",".join(numbers))
+num = input()
+odd_num = [i for i in values.split(",") if int(i)%2!=0]
+print(",".join(odd_num))
 ```
 
 ### Question 17
@@ -501,21 +501,21 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 
 ```python
-netAmount = 0
+net_amount = 0
 while True:
-    s = input()
-    if not s:
+    log = input()
+    if not log:
         break
-    values = s.split(" ")
+    values = log.split(" ")
     operation = values[0]
     amount = int(values[1])
     if operation=="D":
-        netAmount+=amount
+        net_amount+=amount
     elif operation=="W":
-        netAmount-=amount
+        net_amount-=amount
     else:
         pass
-print(netAmount)
+print(net_amount)
 ```
 
 ### Question 18
@@ -543,7 +543,7 @@ In case of input data being supplied to the question, it should be assumed to be
 Solutions:
 
 ```python
-import re
+import re #import the package re
 value = []
 items=[x for x in input().split(',')]
 for p in items:
