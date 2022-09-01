@@ -1,23 +1,24 @@
-# python assignment
+## python assignment
 
 Using strings, lists, tuples and dictionaries concepts, find the reverse complement of AAAAATCCCGAGGCGGCTATATAGGGCTCCGGAGGCGTAATATAAAA
 
-```py
-#create a string of the sequence
+Solution:
+```python
+# create a string of the sequence
 DNA_sequence = 'AAAAATCCCGAGGCGGCTATATAGGGCTCCGGAGGCGTAATATAAAA'
-#make an empty variable of the reverse complement
+# make an empty variable of the reverse complement
 reverse_comp = ""
-#create a dictionary of base complements to reverse
+# create a dictionary of base complements to reverse
 rev_dict={"A": "T", "T": "A", "G": "C", "C": "G"}
-#reverse the sequence using list comprehension
+# reverse the sequence using list comprehension
 rev_seq= DNA_sequence[::-1]
-#get a list of the nucleotides reverse complements
+# get a list of the nucleotides reverse complements
 rev_comp=[rev_dict.get(character) for character in rev_seq]
-#create a one string from the list rev_comp
+# create a one string from the list rev_comp
 rev_str= "".join(rev_comp)
 
 
-#print out the sequence
+# print out the sequence
 print("DNA_seq=", DNA_sequence)
 print("reverse_complement", rev_str)
 ```
@@ -544,27 +545,27 @@ Solutions:
 
 ```python
 import re #import the package re
-value = []
-items=[x for x in input().split(',')]
-for p in items:
-    if len(p)<6 or len(p)>12:
+Password = []
+characters = [i for i in input().split(',')]
+for criteria in characters:
+    if len(criteria)<6 or len(criteria)>12:
         continue
     else:
         pass
-    if not re.search("[a-z]",p):
+    if not re.search("[a-z]",criteria):
         continue
-    elif not re.search("[0-9]",p):
+    elif not re.search("[0-9]",criteria):
         continue
-    elif not re.search("[A-Z]",p):
+    elif not re.search("[A-Z]",criteria):
         continue
-    elif not re.search("[$#@]",p):
+    elif not re.search("[$#@]",criteria):
         continue
-    elif re.search("\s",p):
+    elif re.search("\s",criteria):
         continue
     else:
         pass
-    value.append(p)
-print(",".join(value))
+    characters.append(criteria)
+print(",".join(password))
 ```
 
 ### Question 19
@@ -593,14 +594,14 @@ Solutions:
 from operator import itemgetter, attrgetter
 
 ```python
-l = []
+NAH = []
 while True:
-    s = input()
-    if not s:
+    data = input()
+    if not data:
         break
-    l.append(tuple(s.split(",")))
+    NAH.append(tuple(data.split(",")))
 
-print(sorted(l, key=itemgetter(0,1,2)))
+print(sorted(NAH, key=itemgetter(0,1,2)))
 ```
 
 ### Question 20
@@ -615,16 +616,7 @@ Consider use yield
 Solution:
 
 ```python
-def putNumbers(n):
-    i = 0
-    while i<n:
-        j=i
-        i=i+1
-        if j%7==0:
-            yield j
-
-for i in reverse(100):
-    print(i)
+solving...
 ```
 
 ### Question 21
@@ -653,13 +645,13 @@ In case of input data being supplied to the question, it should be assumed to be
 Solution:
 
 ```python
-import math
-pos = [0,0]
+import math #import library math
+coord = [0,0]
 while True:
-    s = input()
+    vec = input()
     if not s:
         break
-    movement = s.split(" ")
+    movement = vec.split(" ")
     direction = movement[0]
     steps = int(movement[1])
     if direction=="UP":
@@ -673,7 +665,7 @@ while True:
     else:
         pass
 
-print(int(round(math.sqrt(pos[1]**2+pos[0]**2))))
+print(int(round(math.sqrt(coord[1]**2+coord[0]**2))))
 ```
 
 ### Question 22
@@ -1835,7 +1827,7 @@ Use random.choice() to a random element from a list.
 Solution:
 ```python
 import random
-print(random.choice([i for i in range(201) if i%5==0 and i%7==0]))
+print(random.choice([i for i in range(10) if i%5==0 and i%7==0]))
 ```
 
 ### Question 78
@@ -1846,8 +1838,8 @@ Use random.sample() to generate a list of random values.
 
 Solution:
 ```python
-import random
-print(random.sample(range(100), 5))
+import random as blender
+print(random.sample(range(100,200), 5))
 ```
 
 ### Question 79
@@ -1858,7 +1850,7 @@ Use random.sample() to generate a list of random values.
 
 Solution:
 ```python
-import random
+import random as juicer
 print(random.sample([i for i in range(100,201) if i%2==0], 5))
 ```
 
@@ -1870,8 +1862,8 @@ Use random.sample() to generate a list of random values.
 
 Solution:
 ```python
-import random
-print(random.sample([i for i in range(1,1001) if i%5==0 and i%7==0], 5))
+import random as blender
+print(blender.sample([i for i in range(1,1001) if i%5==0 and i%7==0], 5))
 ```
 
 ### Question 81
@@ -1882,8 +1874,8 @@ Use random.randrange() to a random integer in a given range.
 
 Solution:
 ```python
-import random
-print(random.randrange(7,16))
+import random as randomizer
+print(randomizer.randrange(7,16))
 ```
 
 ### Question 82
@@ -1894,11 +1886,11 @@ Use zlib.compress() and zlib.decompress() to compress and decompress a string.
 
 Solution:
 ```python
-import zlib
-s = b'hello world!hello world!hello world!hello world!'
-t = zlib.compress(s)
-print(t)
-print(zlib.decompress(t))
+import zlib as zipbag
+sentence = b'hello world!hello world!hello world!hello world!'
+text = zipbag.compress(sentence)
+print(text)
+print(zipbag.decompress(text))
 ```
 
 ### Question 83
@@ -1913,6 +1905,10 @@ from timeit import Timer
 t = Timer("for i in range(100):1+1")
 print(t.timeit())
 ```
+__output__
+```
+1.3798167339991778
+```
 
 ### Question 84
 Please write a program to shuffle and print the list [3,6,7,8].
@@ -1922,10 +1918,10 @@ Use shuffle() function to shuffle a list.
 
 Solution:
 ```python
-from random import shuffle
-li = [3,6,7,8]
-shuffle(li)
-print(li)
+from random import shuffle as djmix
+list1 = [3,6,7,8]
+djmix(list1)
+print(list1)
 ```
 
 ### Question 85
@@ -1936,10 +1932,10 @@ Use shuffle() function to shuffle a list.
 
 Solution:
 ```python
-from random import shuffle
-li = [3,6,7,8]
-shuffle(li)
-print(li)
+from random import shuffle as djmix
+list1 = [3,6,7,8]
+djmix(list1)
+print(list1)
 ```
 
 ### Question 86
@@ -1950,13 +1946,13 @@ Use list[index] notation to get a element from a list.
 
 Solution:
 ```python
-subjects=["I", "You"]
+ssubjects=["I", "You"]
 verbs=["Play", "Love"]
 objects=["Hockey","Football"]
-for i in range(len(subjects)):
-    for j in range(len(verbs)):
-        for k in range(len(objects)):
-            sentence = "%s %s %s." % (subjects[i], verbs[j], objects[k])
+for a in range(len(subjects)):
+    for b in range(len(verbs)):
+        for c in range(len(objects)):
+            sentence = "%s %s %s." % (subjects[a], verbs[b], objects[c])
             print(sentence)
 ```
 
@@ -1968,9 +1964,9 @@ Use list comprehension to delete a bunch of element from a list.
 
 Solution:
 ```
-li = [5,6,77,45,22,12,24]
-li = [x for x in li if x%2!=0]
-print(li)
+list1 = [5,6,77,45,22,12,24]
+list1 = [i for i in list1 if i%2!=0]
+print(list1)
 ```
 
 ### Question 88
@@ -1981,9 +1977,9 @@ Use list comprehension to delete a bunch of element from a list.
 
 Solution:
 ```
-li = [12,24,35,70,88,120,155]
-li = [x for x in li if x%5!=0 and x%7!=0]
-print(li)
+list1 = [12,24,35,70,88,120,155]
+list1 = [i for i in list1 if i%5!=0 and i%7!=0]
+print(list1)
 ```
 
 ### Question 89
@@ -1995,8 +1991,8 @@ Use enumerate() to get (index, value) tuple.
 
 Solution:
 ```python
-li = [12,24,35,70,88,120,155]
-li = [x for (i,x) in enumerate(li) if i%2!=0]
+list1 = [12,24,35,70,88,120,155]
+list1 = [b for (a,b) in enumerate(list1) if a%2!=0]
 print(li)
 ```
 
@@ -2008,8 +2004,8 @@ Use list comprehension to make an array.
 
 Solution:
 ```
-array = [[ [0 for col in range(8)] for col in range(5)] for row in range(3)]
-print(array)
+zero_array = [[ [0 for col in range(8)] for col in range(5)] for row in range(3)]
+print(zero_array)
 ```
 
 ### Question 91
@@ -2021,9 +2017,9 @@ Use enumerate() to get (index, value) tuple.
 
 Solution:
 ```python
-li = [12,24,35,70,88,120,155]
-li = [x for (i,x) in enumerate(li) if i not in (0,4,5)]
-print(li)
+list1 = [12,24,35,70,88,120,155]
+newlist = [b for (a,b) in enumerate(list1) if a not in (0,4,5)]
+print(newlist)
 ```
 
 ### Question 92
@@ -2034,9 +2030,9 @@ Use list's remove method to delete a value.
 
 Solution:
 ```python
-li = [12,24,35,24,88,120,155]
-li = [x for x in li if x!=24]
-print(li)
+list1 = [12,24,35,24,88,120,155]
+newlist = [i for i in list1 if i!=24]
+print(newlist)
 ```
 
 ### Question 93
@@ -2047,11 +2043,11 @@ Use set() and "&=" to do set intersection operation.
 
 Solution:
 ```python
-set1=set([1,3,6,78,35,55])
-set2=set([12,24,35,24,88,120,155])
-set1 &= set2
-li=list(set1)
-print(li)
+list1 = set([1,3,6,78,35,55])
+list2 = set([12,24,35,24,88,120,155])
+list1 &= list2
+similar = list(list1)
+print(similar)
 ```
 
 ### Question 94
@@ -2062,18 +2058,18 @@ Use set() to store a number of values without duplicate.
 
 Solution:
 ```python
-def removeDuplicate( li ):
-    newli=[]
-    seen = set()
-    for item in li:
-        if item not in seen:
-            seen.add( item )
-            newli.append(item)
+our_list=[12,24,35,24,88,120,155,88,120,155]
+def removeDuplicate( our_list ):
+    newlist=[]
+    non_dup = set()
+    for item in our_list:
+        if item not in non_dup:
+            non_dup.add( item )
+            newlist.append(item)
 
-    return newli
-
-li=[12,24,35,24,88,120,155,88,120,155]
-print(removeDuplicate(li))
+    return newlist
+    
+print(removeDuplicate(our_list))
 ```
 
 ### Question 95
@@ -2096,8 +2092,8 @@ class Female( Person ):
     def getGender( self ):
         return "Female"
 
-aMale = Male()
-aFemale= Female()
+man = Male()
+woman = Female()
 print(aMale.getGender())
 print(aFemale.getGender())
 ```
@@ -2126,11 +2122,11 @@ Use dict.get() method to lookup a key with default value.
 
 Solution:
 ```python
-dic = {}
-s=raw_input()
-for s in s:
-    dic[s] = dic.get(s,0)+1
-print('\n'.join(['%s,%s' % (k, v) for k, v in dic.items()]))
+dictionary = {}
+characters = input()
+for characters in characters:
+    dictionary[characters] = dictionary.get(characters,0)+1
+print('\n'.join(['%s,%s' % (k, v) for k, v in dictionary.items()]))
 ```
 
 ### Question 97
@@ -2150,9 +2146,9 @@ Use list[::-1] to iterate a list in a reverse order.
 
 Solution:
 ```python
-s=raw_input()
-s = s[::-1]
-print(s)
+sentence = input()
+rev_sentence = sentence[::-1]
+print(rev_sentence)
 ```
 
 ### Question 98
@@ -2172,9 +2168,10 @@ Use list[::2] to iterate a list by step 2.
 
 Solution:
 ```python
-s=raw_input()
-s = s[::2]
-print(s)
+
+any_string= input()
+characters = any_string[::2]
+print(characters)
 ```
 
 ### Question 99
@@ -2185,8 +2182,8 @@ Use itertools.permutations() to get permutations of list.
 
 Solution:
 ```python
-import itertools
-print(list(itertools.permutations([1,2,3])))
+import itertools as perm
+print(list(perm.permutations([1,2,3])))
 ```
 
 ### Question 100
@@ -2198,16 +2195,18 @@ Use for loop to iterate all possible solutions.
 
 Solution:
 ```python
-def solve(numheads,numlegs):
-    ns='No solutions!'
-    for i in range(numheads+1):
-        j=numheads-i
-        if 2*i+4*j==numlegs:
+def solve(num_heads,num_legs):
+    error ='unsolved'
+    for i in range(num_heads+1):
+        j=num_heads-i
+        if 2*i+4*j==num_legs:
             return i,j
-    return ns,ns
+    return error,error
 
-numheads=35
-numlegs=94
-solutions=solve(numheads,numlegs)
-print(solutions)
+num_heads = 35
+num_legs = 94
+answer = solve(num_heads,num_legs)
+print(answer)
 ```
+__output__
+```23, 12```
