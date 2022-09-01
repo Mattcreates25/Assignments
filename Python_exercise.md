@@ -345,14 +345,14 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-value = []
-items=[x for x in input().split(',')]
-for p in items:
-    intp = int(p, 2)
-    if not intp%5:
-        value.append(p)
+numbers = []
+splitnumb = [i for i in input().split(',')]
+for x in splitnumb:
+    divisible = int(x, 2)
+    if not divisible%5:
+        value.append(x)
 
-print(','.join(value))
+print(','.join(numbers))
 ```
 
 ### Question 12
@@ -367,12 +367,12 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-values = []
-for i in range(1000, 3001):
-    s = str(i)
-    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[3])%2==0):
-        values.append(s)
-print(",".join(values))
+even_numbers = []
+for x in range(1000, 3001):
+    numbers = str(x)
+    if (int(numbers[0])%2==0) and (int(numbers[1])%2==0) and (int(numbers[2])%2==0) and (int(numbers[3])%2==0):
+        even_numbers.append(numbers)
+print(",".join(even_numbers))
 ```
 
 ### Question 13
@@ -391,17 +391,17 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-s = input()
-d={"DIGITS":0, "LETTERS":0}
-for c in s:
-    if c.isdigit():
-        d["DIGITS"]+=1
-    elif c.isalpha():
-        d["LETTERS"]+=1
+sentence = input()
+dictionary = {"DIGITS":0, "LETTERS":0}
+for item in sentence:
+    if item.isdigit():
+        dictionary["DIGITS"]+ = 1
+    elif item.isalpha():
+        dictionary["LETTERS"]+ = 1
     else:
         pass
-print("LETTERS", d["LETTERS"])
-print("DIGITS", d["DIGITS"])
+print("LETTERS", dictionary["LETTERS"])
+print("DIGITS", dictionary["DIGITS"])
 ```
 
 ### Question 14
@@ -420,17 +420,17 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-s = input()
-d={"UPPER CASE":0, "LOWER CASE":0}
-for c in s:
-    if c.isupper():
-        d["UPPER CASE"]+=1
-    elif c.islower():
-        d["LOWER CASE"]+=1
+sentence = input()
+dictionary = {"UPPER CASE":0, "LOWER CASE":0}
+for item in sentence:
+    if item.isupper():
+        dictionary["UPPER CASE"]+ = 1
+    elif item.islower():
+        dictionary["LOWER CASE"]+ = 1
     else:
         pass
-print("UPPER CASE", d["UPPER CASE"])
-print("LOWER CASE", d["LOWER CASE"])
+print("UPPER CASE", dictionary["UPPER CASE"])
+print("LOWER CASE", dictionary["LOWER CASE"])
 ```
 
 ### Question 15
