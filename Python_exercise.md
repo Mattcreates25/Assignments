@@ -67,12 +67,12 @@ Consider use range(#begin, #end) method
 
 Solution:
 ```python
-div=[]
-for i in range(2000, 3201):
-    if (i%7==0) and (i%5!=0):
-        div.append(str(i))
+divisible=[]
+for numbers in range(2000, 3201):
+    if (numbers%7==0) and (numbers%5!=0):
+        divisible.append(str(numbers))
 
-print(','.join(div))
+print(','.join(divisible))
 ```
 
 __output__
@@ -95,13 +95,13 @@ In case of input data being supplied to the question, it should be assumed to be
 
 Solution:
 ```python
-def fact(x):
-    if x == 0:
+def fact(number):
+    if number == 0:
         return 1
-    return x * fact(x - 1)
+    return number * fact(number - 1)
 
-x=int(input())
-print(fact(x))
+number =int(input())
+print(fact(number))
 ```
 __output__
 ``` 8
@@ -243,16 +243,16 @@ Note: In case of input data being supplied to the question, it should be assumed
 Solution:
 ```python
 input_str = input()
-dimensions=[int(x) for x in input_str.split(',')]
-rowNum=dimensions[0]
-colNum=dimensions[1]
-multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+dim = [int(x) for x in input_str.split(',')]
+rows = dim[0]
+cols = dim[1]
+lists = [[0 for col in range(cols)] for row in range(rows)]
 
-for row in range(rowNum):
-    for col in range(colNum):
-        multilist[row][col]= row*col
+for row in range(rows):
+    for col in range(cols):
+        lists[row][col]= row*col
 
-print(multilist)
+print(lists)
 ```
 
 ### Question 8
